@@ -1,5 +1,5 @@
 FROM conanio/gcc10 AS builder
-#USER root
+USER root
 
 ADD build.sh /tmp/build.sh
 
