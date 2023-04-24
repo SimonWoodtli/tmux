@@ -1,5 +1,6 @@
 #!/bin/sh
-set -ouex pipefail
+
+set -uex pipefail
 
 apt update -y && apt install -y libevent-dev libncurses5-dev build-essential bison
 git clone http://github.com/tmux/tmux /tmp/tmux
