@@ -41,7 +41,8 @@ jobs:
       - name: Get current version
         id: labels
         run: |
-          ver=$(sed -n 's/^AC_INIT(\[tmux\], \([^]]*\)).*$/\1/p' https://raw.githubusercontent.com/tmux/tmux/master/configure.ac)
+          curl -LJ https://raw.githubusercontent.com/tmux/tmux/master/configure.ac -o /tmp/configure.ac
+          ver=$(sed -n 's/^AC_INIT(\[tmux\], \([^]]*\)).*$/\1/p' /tmp/configure.ac)
           echo "VERSION=$ver" >> $GITHUB_OUTPUT
 
       # Build metadata
