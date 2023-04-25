@@ -1,5 +1,7 @@
 name: build-tmux
 on:
+  schedule:
+    - cron: '20 20 15 * *'  # 8:20pm on the 15th every month
   push:
     branches:
       - main
