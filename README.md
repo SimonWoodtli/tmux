@@ -16,12 +16,20 @@ This image contains the current tmux binary with support to display sixels.
 
 * For CI/Image install: `COPY --from=ghcr.io/simonwoodtli/tmux:latest /bin/tmux /where/You/Want`
 * For local install:
-1. Build image: `docker build -t alpine-tmux -f- . <<EOF
+1. Build image:
+
+```
+docker build -t alpine-tmux -f- . <<EOF
 FROM alpine:latest
 COPY --from=ghcr.io/simonwoodtli/tmux:latest /bin/tmux /bin/tmux
-EOF`
-2. Copy tmux to host: `docker run --rm -v $HOME/.local/bin:/mnt alpine-tmux sh -c "install
-/bin/tmux /mnt"`
+EOF
+```
+
+2. Copy tmux to host:
+
+```
+docker run --rm -v $HOME/.local/bin:/mnt alpine-tmux sh -c "install /bin/tmux /mnt"
+```
 
 TODO: figure out how to make a static binary
 
