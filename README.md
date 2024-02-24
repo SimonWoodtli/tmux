@@ -1,12 +1,12 @@
-# Latest borderless tmux
+# Latest tmux with sixel support
 
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/tmux)](https://artifacthub.io/packages/search?repo=tmux)
 
-This image contains the current tmux binary without pane borders. 
+This image contains the current tmux binary with support to display sixels.
 
 ## Features
 
-* Borderless tmux
+* sixel support
 * Nice looking wallpapers with transparent terminals
 * Latest version
 * Atomic update: compiles latest tmux once a month and creates scratch image
