@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
-##Author: Thorsten Schubert (zenofile)
+##Original Author: Thorsten Schubert (zenofile)
+##Modified by Simon D. Woodtli
 # vi: set ft=sh ts=4 sw=0 sts=-1 sr noet nosi tw=0 fdm=manual:
 # static tmux binary with sixel support
 
 set -o errexit
+
+#Install stuff for conan img to build tmux: (I guess we don't need ncurses and libevent as we manually download them later, but whatever)
+apt-get install libevent-dev ncurses-dev build-essential bison pkg-config autoconf automake -y
 
 declare -A version
 

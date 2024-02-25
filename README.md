@@ -2,14 +2,13 @@
 
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/tmux)](https://artifacthub.io/packages/search?repo=tmux)
 
-This image contains the current tmux binary with support to display sixels.
+This image contains the latest standalone tmux binary with sixels support enabled.
 
 ## Features
 
-* sixel support
-* Nice looking wallpapers with transparent terminals
+* Sixel support
+* Static standalone binary
 * Latest version
-* Atomic update: compiles latest tmux once a month and creates scratch image
 * Hosted on ghcr.io
 
 ## Installation
@@ -30,8 +29,6 @@ EOF
 ```
 docker run --rm -v $HOME/.local/bin:/mnt alpine-tmux sh -c "install /bin/tmux /mnt"
 ```
-
-TODO: figure out how to make a static binary
 
 Related:
 
