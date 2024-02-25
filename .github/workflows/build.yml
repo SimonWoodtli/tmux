@@ -1,13 +1,13 @@
 name: build-tmux
 on:
-  schedule:
-    - cron: '20 20 15 * *'  # 8:20pm on the 15th every month
   push:
     branches:
       - main
     paths-ignore:
       - '**.md'
       - '**.txt'
+    workflow_dispatch:
+
 env:
     IMAGE_NAME: ${{ github.event.repository.name }}
     MAJOR_VERSION: 3
