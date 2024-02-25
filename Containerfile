@@ -7,4 +7,4 @@ RUN /tmp/build.sh
 
 FROM scratch
 # Copy binary
-COPY --from=builder /usr/local/bin/tmux /bin/tmux
+COPY --from=builder /root/tmux /bin/tmux
