@@ -1,10 +1,10 @@
 FROM conanio/gcc10 AS builder
 USER root
 
-ADD build.sh /tmp/build.sh
+ADD build.sh /root/build.sh
 
-RUN /tmp/build.sh
+RUN /root/build.sh
 
 FROM scratch
 # Copy binary
-COPY --from=builder /tmp/tmux /bin/tmux
+COPY --from=builder /root/tmux /bin/tmux
