@@ -6,8 +6,9 @@
 
 set -o errexit
 
-#Install stuff for conan img to build tmux: (I guess we don't need ncurses and libevent as we manually download them later, but whatever)
-apt-get install libevent-dev ncurses-dev build-essential bison pkg-config autoconf automake -y
+#Install stuff for conan img to build tmux:
+apt-get update -y
+apt-get install build-essential bison pkg-config autoconf automake -y
 
 declare -A version
 
